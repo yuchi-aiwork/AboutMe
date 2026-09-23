@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>李育齊 (Yu-Chi Li) | 資深軟體工程師・XR / Android OEM / 系統與遊戲效能優化</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="李育齊 (Yu-Chi Li) - 5 年跨 Android 系統層、XR SDK (WaveXR/OpenXR) 與 Unity 效能實戰，具備底層多媒體架構、即時渲染管線調優經驗，專注於打造穩定極致的互動產品。" />
+  <meta name="keywords"
+    content="李育齊, Yu-Chi Li, Android OEM, WaveXR, OpenXR, Unity Optimization, SDET, TPM, System Architecture" />
+  <meta name="author" content="李育齊 (Yu-Chi Li)" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="李育齊 (Yu-Chi Li) | 資深軟體工程師・XR / Android OEM / 遊戲效能優化" />
+  <meta property="og:description" content="5 年跨 Android 系統層、XR SDK 與 Unity 效能實戰，為產品打造流暢、穩定的互動體驗。線上即時試玩核心遊戲作品。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/greed-temple.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <!-- Google Fonts: Outfit & Inter & Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;900&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+
+<body class="bg-dark text-light antialiased selection-brand">
+
+  <!-- Background Ambient Glow Canvas -->
+  <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Glass Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" id="nav-brand-logo" aria-label="回到首頁">
+        <span class="logo-symbol">YC</span>
+        <div class="logo-text-group">
+          <span class="logo-name">李育齊</span>
+          <span class="logo-title">Yu-Chi Li</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="主要導覽選單">
+        <ul class="nav-links">
+          <li><a href="#about-story" class="nav-link" id="nav-link-about">故事與理念</a></li>
+          <li><a href="#engineering-impact" class="nav-link" id="nav-link-impact">核心專案實績</a></li>
+          <li><a href="#core-skills" class="nav-link" id="nav-link-skills">能力矩陣</a></li>
+          <li><a href="#experience" class="nav-link" id="nav-link-experience">歷練與學術</a></li>
+          <li><a href="#featured-works" class="nav-link" id="nav-link-works">AI Game 作品</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="mailto:yuchi.li.dev@gmail.com" class="btn btn-secondary-glass" id="nav-contact-btn">聯絡我</a>
+        <a href="#featured-works" class="btn btn-primary-pulse" id="nav-cta-btn">試玩 AI Game 作品</a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="開啟選單" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#about-story" class="mobile-nav-link">📖 故事理念與轉型</a></li>
+        <li><a href="#engineering-impact" class="mobile-nav-link">⚙️ 代表性核心專案</a></li>
+        <li><a href="#core-skills" class="mobile-nav-link">⚡ 核心技術矩陣</a></li>
+        <li><a href="#experience" class="mobile-nav-link">💼 歷練與學術歷程</a></li>
+        <li><a href="#featured-works" class="mobile-nav-link">🤖 AI Game 作品試玩</a></li>
+        <li><a href="mailto:yuchi.li.dev@gmail.com" class="mobile-nav-link">✉️ 聯絡我 (Email)</a></li>
+      </ul>
+      <div class="mobile-menu-cta">
+        <a href="#featured-works" class="btn btn-primary-pulse w-full">立即線上試玩 AI Game 作品</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- 1. Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-layout">
+        <div class="hero-content">
+
+          <div class="hero-badge-pill" id="hero-status-pill">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Senior Software Engineer (5+ yrs)・XR & Systems</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-headline">
+            李育齊 <span class="hero-title-en">Yu-Chi Li</span>
+          </h1>
+
+          <p class="hero-hook" id="hero-value-hook">
+            <strong>5 年跨 Android 系統層、XR SDK 與 Unity 效能實戰</strong>，為產品打造流暢、穩定的互動體驗。
+          </p>
+
+          <p class="hero-subtext" id="hero-sub-headline">
+            從底層事件排查到前端 3D 渲染，用嚴謹的工程直覺把關產品質量與技術落地。
+          </p>
+        </div>
+
+        <!-- Hero Visual Tech Card -->
+        <div class="hero-visual" id="hero-visual-card">
+          <div class="tech-stack-showcase-card">
+            <div class="tech-card-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">yuchi_li_systems.ts</span>
+              <span class="live-pill">ONLINE</span>
+            </div>
+            <div class="terminal-body">
+              <pre class="code-snippet"><code><span class="code-kw">const</span> <span class="code-var">engineer</span> = {
+  <span class="code-prop">name</span>: <span class="code-str">"李育齊 (Yu-Chi Li)"</span>,
+  <span class="code-prop">role</span>: <span class="code-str">"Senior Software Engineer"</span>,
+  <span class="code-prop">company</span>: <span class="code-str">"HTC 宏達國際電子 (5 yrs)"</span>,
+  <span class="code-prop">specialization</span>: [
+    <span class="code-str">"Android OEM System UI / Service"</span>,
+    <span class="code-str">"XR Middleware (WaveXR / OpenXR)"</span>,
+    <span class="code-str">"Unity Performance & Memory Profiling"</span>,
+    <span class="code-str">"Unity Game Develop"</span>
+  ],
+  <span class="code-prop">aiGameWorks</span>: [
+    <span class="code-str">"GreedTemple"</span>,
+    <span class="code-str">"蛇來蛇去"</span>,
+    <span class="code-str">"ElementSurvivor"</span>
+  ]
+};</code></pre>
+            </div>
+            <div class="tech-card-footer">
+              <div class="badge-tag"><span class="icon">🎮</span> Unity Engine</div>
+              <div class="badge-tag"><span class="icon">📱</span> AOSP</div>
+              <div class="badge-tag"><span class="icon">🤖</span> AI Game Prototyping</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. About Me: The Story & Vision Section -->
+    <section class="section about-section" id="about-story">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">About Me: Story & Vision</div>
+          <h2 class="section-title">個人故事與技術理念</h2>
+        </div>
+
+        <div class="narrative-grid">
+
+          <!-- Narrative Step 1 -->
+          <div class="narrative-card" id="narrative-journey">
+            <div class="narrative-icon-box icon-cyan">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <div class="narrative-step">STAGE 01</div>
+            <h3 class="narrative-title">研發根基與 XR 啟航</h3>
+            <ul class="narrative-list">
+              <li><strong>生醫</strong>：採集生理訊號並透過神經網路分析。</li>
+              <li><strong>Unity (開發為主)</strong>：虛擬教室、虛擬地鐵、ElementSurvivor (元素倖存者)。</li>
+            </ul>
+            <div class="narrative-highlight">
+              從生醫信號處理到 3D 虛擬互動，打通演算法設計與遊戲原型落地。
+            </div>
+          </div>
+
+          <!-- Narrative Step 2 -->
+          <div class="narrative-card" id="narrative-shift">
+            <div class="narrative-icon-box icon-indigo">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+            </div>
+            <div class="narrative-step">STAGE 02</div>
+            <h3 class="narrative-title">底層磨練與架構自覺</h3>
+            <ul class="narrative-list">
+              <li><strong>AOSP</strong>：WaveXR Runtime、VRSystem Service (OEM)。</li>
+              <li><strong>Unity (維護為主)</strong>：ViveSync、ViveWaveXR Plugin、ViveOpenXR Plugin。</li>
+            </ul>
+            <div class="narrative-highlight">
+              掌握底層輸入事件流、硬體 HAL 對接與商業級系統服務架構維護。
+            </div>
+          </div>
+
+          <!-- Narrative Step 3: AI Innovation -->
+          <div class="narrative-card" id="narrative-ai">
+            <div class="narrative-icon-box icon-purple">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4 4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" />
+                <path d="M16 17v1a4 4 0 0 1-8 0v-1" />
+                <path d="M12 11v6" />
+                <circle cx="5" cy="12" r="2" />
+                <circle cx="19" cy="12" r="2" />
+                <path d="M7 12h3m4 0h3" />
+              </svg>
+            </div>
+            <div class="narrative-step">STAGE 03</div>
+            <h3 class="narrative-title">AI 賦能與創新實踐</h3>
+            <ul class="narrative-list">
+              <li><strong>玩法機制原型極速驗證</strong>：借助生成式 AI 輔助核心機制設計與邏輯原型實作，大幅縮短發想到可玩版本的迭代週期。</li>
+              <li><strong>演算法調優與數值平衡</strong>：結合 AI 調校地城隨機生成、消除矩陣判斷與彈幕波次數值曲線，確保體感流暢平衡。</li>
+              <li><strong>極致人效獨立落地研發</strong>：整合 AI 代碼重構、概念視覺生成與雲端容器化部署，以極高人效獨立完成多款上線遊戲。</li>
+            </ul>
+            <div class="narrative-highlight">
+              善用 AI 工具鏈驅動高人效交付，兼備底層系統深度與極速原型落地實力。
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. Key Engineering Projects Section -->
+    <section class="section impact-section" id="engineering-impact">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">Core Engineering Projects</div>
+          <h2 class="section-title">代表性工程實績與核心專案</h2>
+        </div>
+
+        <div class="impact-cards-stack">
+
+          <!-- Case Study 1 -->
+          <div class="impact-card" id="case-study-rtmp">
+            <div class="impact-card-header">
+              <div class="impact-index">PROJECT 01</div>
+              <h3 class="impact-headline">VR 系統級多媒體管線與 RTMP 直播系統 (0 到 1 自主研發)</h3>
+              <div class="impact-metrics-pill">
+                <span class="metric-highlight">Android MediaCodec</span>
+                <span class="metric-highlight">RTMP 串流協定</span>
+                <span class="metric-highlight">Wi-Fi Display 投屏</span>
+              </div>
+            </div>
+
+            <div class="pai-grid">
+              <div class="pai-block pai-problem">
+                <div class="pai-badge"><span class="badge-dot-red"></span> 專案挑戰與目標</div>
+                <p>
+                  VR 頭顯在運行高負載 3D 內容時，若同時執行螢幕錄製或直播推流，極易引發 CPU/GPU 資源爭搶，面臨掉幀、記憶體突波與系統過熱等多重挑戰。
+                </p>
+              </div>
+
+              <div class="pai-block pai-action">
+                <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
+                <p>
+                  從 0 到 1 深度整合 Android <code>MediaCodec</code> 硬體編碼與 RTMP 協定；重構 Surface
+                  生命週期與雙緩衝管線，將繁重編碼工作卸載至專屬硬體晶片，實現非同步高效編解碼。
+                </p>
+              </div>
+
+              <div class="pai-block pai-impact">
+                <div class="pai-badge"><span class="badge-dot-green"></span> 交付成果與價值</div>
+                <p>
+                  成功實現 VR 頭顯低延遲 YouTube 直播、原生錄影與 Miracast 無線投屏，確保前台 3D 渲染與背景多媒體管線互不干擾、長期穩定運行。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div class="impact-card" id="case-study-xr-sdk">
+            <div class="impact-card-header">
+              <div class="impact-index">PROJECT 02</div>
+              <h3 class="impact-headline">WaveXR / OpenXR 跨平台 Unity SDK 架構與硬體整合</h3>
+              <div class="impact-metrics-pill">
+                <span class="metric-highlight">商業級 XR SDK</span>
+                <span class="metric-highlight">硬體抽象轉接層</span>
+                <span class="metric-highlight">跨平台架構擴充</span>
+              </div>
+            </div>
+
+            <div class="pai-grid">
+              <div class="pai-block pai-problem">
+                <div class="pai-badge"><span class="badge-dot-red"></span> 專案挑戰與目標</div>
+                <p>
+                  面對新世代 XR 控制器按鍵配置、空間定位與周邊硬體快速迭代，既有企業客戶 SDK 存在相容性碎片化與事件分發維護成本高的瓶頸。
+                </p>
+              </div>
+
+              <div class="pai-block pai-action">
+                <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
+                <p>
+                  主導 WaveXR 與 OpenXR 雙版本 Unity SDK 介面擴充；設計解耦的硬體事件抽象分發層與轉接機制，支援外設熱插拔與即時鍵位映射，並建立健全的邊界測試防護。
+                </p>
+              </div>
+
+              <div class="pai-block pai-impact">
+                <div class="pai-badge"><span class="badge-dot-green"></span> 交付成果與價值</div>
+                <p>
+                  快速打通多家企業客戶的新硬體周邊對接，顯著縮減新裝置適配週期，提供企業開發者高可靠度與長期向下相容的 SDK 整合體驗。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 3 -->
+          <div class="impact-card" id="case-study-vive-sync">
+            <div class="impact-card-header">
+              <div class="impact-index">PROJECT 03</div>
+              <h3 class="impact-headline">VIVE Sync 企業級虛擬協作效能調優</h3>
+              <div class="impact-metrics-pill">
+                <span class="metric-highlight">Unity 效能調優</span>
+                <span class="metric-highlight">記憶體架構重構</span>
+                <span class="metric-highlight">遮擋剔除 (Occlusion Culling)</span>
+              </div>
+            </div>
+
+            <div class="pai-grid">
+              <div class="pai-block pai-problem">
+                <div class="pai-badge"><span class="badge-dot-red"></span> 專案挑戰與目標</div>
+                <p>
+                  在 VIVE Sync 跨國多人虛擬會議應用中，用戶拍攝高解析快照時容易引發瞬時卡頓與雙倍 RenderTexture 記憶體峰值，影響商務協作流暢度。
+                </p>
+              </div>
+
+              <div class="pai-block pai-action">
+                <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
+                <p>
+                  透過 Unity Profiler、Memory Profiler 與 Android Logcat 定位 CPU-GPU 傳輸與記憶體拷貝瓶頸；導入 ASTC 紋理壓縮規範、動態降採樣機制與視野遮擋剔除
+                  (Occlusion Culling)。
+                </p>
+              </div>
+
+              <div class="pai-block pai-impact">
+                <div class="pai-badge"><span class="badge-dot-green"></span> 交付成果與價值</div>
+                <p>
+                  全面消除快照時的卡頓現象並顯著抑制記憶體峰值，徹底解決獨立 VR 一體機在長時間多人群聚會議中的掉幀與穩定性問題。
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Core Competencies & Skills Section -->
+    <section class="section skills-section" id="core-skills">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">Core Competencies</div>
+          <h2 class="section-title">核心技術能力矩陣</h2>
+        </div>
+
+        <div class="skills-matrix-grid">
+
+          <!-- Category 1: Languages -->
+          <div class="skill-category-card" id="skill-cat-languages">
+            <div class="category-header">
+              <span class="category-icon">💻</span>
+              <h3 class="category-title">Programming Languages</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-item"><span class="skill-name">C#</span><span class="skill-exp">精通 / Unity</span></div>
+              <div class="skill-item"><span class="skill-name">Java</span><span class="skill-exp">Android
+                  Framework</span></div>
+              <div class="skill-item"><span class="skill-name">C / C++</span><span class="skill-exp">NDK / 底層通訊</span>
+              </div>
+              <div class="skill-item"><span class="skill-name">Python</span><span class="skill-exp">自動化腳本 / 數據</span>
+              </div>
+              <div class="skill-item"><span class="skill-name">TypeScript / JS</span><span class="skill-exp">Web
+                  遊戲與互動</span></div>
+            </div>
+          </div>
+
+          <!-- Category 2: Platforms & Frameworks -->
+          <div class="skill-category-card" id="skill-cat-platforms">
+            <div class="category-header">
+              <span class="category-icon">📱</span>
+              <h3 class="category-title">Platforms & Frameworks</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-item"><span class="skill-name">Android OS</span><span class="skill-exp">System UI / OEM
+                  Service</span></div>
+              <div class="skill-item"><span class="skill-name">Unity Engine</span><span class="skill-exp">2D/3D /
+                  Runtime</span></div>
+              <div class="skill-item"><span class="skill-name">WaveXR & OpenXR</span><span class="skill-exp">HTC VIVE
+                  SDK 整合</span></div>
+              <div class="skill-item"><span class="skill-name">VR/XR HMDs</span><span class="skill-exp">Standalone &
+                  PCVR</span></div>
+              <div class="skill-item"><span class="skill-name">IPC & Architecture</span><span class="skill-exp">AIDL /
+                  跨程序通訊</span></div>
+              <div class="skill-item"><span class="skill-name">GCP Cloud Run</span><span
+                  class="skill-exp">容器化遊戲部署</span></div>
+            </div>
+          </div>
+
+          <!-- Category 3: Testing & Diagnostics -->
+          <div class="skill-category-card" id="skill-cat-diagnostics">
+            <div class="category-header">
+              <span class="category-icon">🔬</span>
+              <h3 class="category-title">Testing & Diagnostics (SDET)</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-item"><span class="skill-name">Unity & Memory Profiler</span><span
+                  class="skill-exp">記憶體洩漏與瓶頸</span></div>
+              <div class="skill-item"><span class="skill-name">Snapdragon Profiler</span><span
+                  class="skill-exp">高通晶片級效能分析</span></div>
+              <div class="skill-item"><span class="skill-name">Draw Call & GC Opt</span><span class="skill-exp">渲染批次與 GC
+                  壓減</span></div>
+              <div class="skill-item"><span class="skill-name">Android Logcat / ADB</span><span
+                  class="skill-exp">底層排錯與自動化</span></div>
+              <div class="skill-item"><span class="skill-name">RenderDoc / GLES</span><span
+                  class="skill-exp">繪圖管線幀分析</span></div>
+              <div class="skill-item"><span class="skill-name">System Tracing</span><span class="skill-exp">Systrace /
+                  Perfetto</span></div>
+            </div>
+          </div>
+
+          <!-- Category 4: Multimedia Architecture -->
+          <div class="skill-category-card" id="skill-cat-multimedia">
+            <div class="category-header">
+              <span class="category-icon">🎬</span>
+              <h3 class="category-title">Multimedia Architecture</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-item"><span class="skill-name">MediaCodec</span><span class="skill-exp">硬體音視訊編解碼</span>
+              </div>
+              <div class="skill-item"><span class="skill-name">RTMP Live Streaming</span><span
+                  class="skill-exp">即時低延遲直播協定</span></div>
+              <div class="skill-item"><span class="skill-name">Miracast</span><span class="skill-exp">Wi-Fi Display
+                  無線投屏</span></div>
+              <div class="skill-item"><span class="skill-name">Surface Lifecycle</span><span
+                  class="skill-exp">雙緩衝與紋理共享</span></div>
+              <div class="skill-item"><span class="skill-name">EGL / GLES Context</span><span
+                  class="skill-exp">跨執行緒繪圖資源</span></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. Professional Experience & Academic Background Section -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">Career & Academic Journey</div>
+          <h2 class="section-title">產業歷練與學術歷程</h2>
+        </div>
+
+        <div class="experience-academic-stack">
+
+          <!-- HTC Work Experience Card -->
+          <div class="experience-card" id="experience-htc">
+            <div class="experience-badge-wrap">
+              <div class="experience-company-top">
+                <div class="experience-crest">HTC</div>
+                <div>
+                  <h3 class="experience-company">宏達國際電子股份有限公司 (HTC Corporation)</h3>
+                  <div class="experience-role-time">
+                    <span class="role-title">軟體研發工程師 (Senior Software Engineer / RD)</span>
+                    <span class="tenure-badge">2021/04 – 2026/02・5 年</span>
+                  </div>
+                  <div class="experience-loc">📍 新北市新店區・消費性電子與 XR 研發總部</div>
+                </div>
+              </div>
+
+              <div class="experience-meta-box">
+                <div class="exp-meta-item">
+                  <strong>系統與平台：</strong> Android OS (System UI / OEM Service), VR/XR HMDs (Standalone & PCVR), IPC
+                </div>
+                <div class="exp-meta-item">
+                  <strong>引擎與 SDK：</strong> Unity (C#), WaveXR SDK, OpenXR, Android NDK/SDK
+                </div>
+                <div class="exp-meta-item">
+                  <strong>診斷與調校：</strong> Unity Profiler, Memory Profiler, RenderDoc, Snapdragon Profiler, Draw Call
+                  Batching, GC Optimization
+                </div>
+              </div>
+            </div>
+
+            <div class="experience-details">
+              <h4 class="exp-scope-title">核心範疇：Android 系統服務、WaveXR/OpenXR SDK 客製化與 Unity 執行期調優</h4>
+              <p class="exp-desc">
+                於 HTC 擔任軟體研發工程師近 5 年，橫跨底層 Android OEM 系統服務到上層 Unity 應用渲染管線。熟悉 VR 軟硬整合流程與跨程序通訊 (IPC)，具備系統事件分發 (Input
+                Dispatching) 與執行期效能瓶頸的第一線深度除錯排查實力。
+              </p>
+
+              <div class="exp-bullet-group">
+                <div class="exp-bullet-item">
+                  <div class="bullet-dot"></div>
+                  <div class="bullet-content">
+                    <strong>Android 系統層應用與多媒體架構開發</strong>
+                    <span>負責 VR 裝置之 OEM 系統級應用與 System UI 全生命週期維護，深入排查跨系統硬體事件（Input
+                      Dispatching）與穩定度問題；自主打造系統級多媒體管線，整合原生截圖錄影、Miracast 無線投屏與 RTMP 即時推流功能。</span>
+                  </div>
+                </div>
+
+                <div class="exp-bullet-item">
+                  <div class="bullet-dot"></div>
+                  <div class="bullet-content">
+                    <strong>XR 跨平台 SDK 架構客製化與硬體整合</strong>
+                    <span>維護與擴充 WaveXR 及 Wave OpenXR Unity SDK，針對新硬體配件設計輸入事件映射與擴充功能，確保底層驅動至 Unity C# API
+                      的高相容性、熱插拔機制與企業客戶穩定度。</span>
+                  </div>
+                </div>
+
+                <div class="exp-bullet-item">
+                  <div class="bullet-dot"></div>
+                  <div class="bullet-content">
+                    <strong>Unity 3D 執行期深度優化 (VIVE Sync)</strong>
+                    <span>主導企業級虛擬協作 VR 專案「VIVE Sync」之效能與記憶體調校。善用 Profiler 工具定位瓶頸，優化記憶體拷貝管線、RenderTexture 生命週期管理、推動 ASTC
+                      壓縮規範及引入 Occlusion Culling，有效消除操作卡頓並降低記憶體峰值。</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="exp-tags">
+                <span class="etag">📱 Android OS / System UI</span>
+                <span class="etag">🥽 WaveXR & OpenXR SDK</span>
+                <span class="etag">🎮 Unity Engine (C#)</span>
+                <span class="etag">⚡ Snapdragon & Unity Profiler</span>
+                <span class="etag">🔬 RenderDoc / GLES</span>
+                <span class="etag">🎬 MediaCodec & RTMP</span>
+                <span class="etag">🔄 IPC & Draw Call Batching</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic Background Card (NCU) -->
+          <div class="academic-card" id="academic-ncu">
+            <span id="academic" style="position: absolute; top: -100px;"></span>
+            <div class="academic-badge-wrap">
+              <div class="academic-company-top">
+                <div class="academic-crest">NCU</div>
+                <div>
+                  <h3 class="academic-school">國立中央大學 (National Central University)</h3>
+                  <div class="academic-role-time">
+                    <span class="academic-degree">軟體工程碩士 (Master of Science in Software Engineering)</span>
+                    <span class="tenure-badge tenure-badge-blue">2018 – 2020</span>
+                  </div>
+                  <div class="academic-loc">📍 桃園市中壢區・資訊工程研究所軟體工程碩士班</div>
+                </div>
+              </div>
+
+              <div class="academic-meta-box">
+                <div class="exp-meta-item">
+                  <strong>核心研究：</strong> EEG 腦電信號分析、生理反饋機制 (Biofeedback)、VR 虛擬實境人機互動 (HCI)
+                </div>
+                <div class="exp-meta-item">
+                  <strong>開發技術：</strong> Unity (C#), SteamVR, VRTK, HTC VIVE, Python, MATLAB, C/C++
+                </div>
+                <div class="exp-meta-item">
+                  <strong>演算法與分析：</strong> 連續小波轉換 (CWT)、機器學習 (CNN / EEGNet)、SPSS 統計分析
+                </div>
+              </div>
+            </div>
+
+            <div class="academic-details">
+              <h4 class="research-title">碩士研究與代表性專案實績 (Research & Projects)</h4>
+              <p class="research-desc">
+                在碩士研究期間，專注於即時腦電信號 (Electroencephalogram, EEG) 特徵萃取與數位信號處理 (DSP)，設計閉迴路生物反饋機制，將大腦專注度與認知狀態無縫映射至 VR 3D
+                互動環境中，奠定深厚軟硬整合與資料分析底蘊。
+              </p>
+
+              <div class="exp-bullet-group">
+                <div class="exp-bullet-item">
+                  <div class="bullet-dot bullet-dot-blue"></div>
+                  <div class="bullet-content">
+                    <strong>Virtual Subway 虛擬地鐵失智症認知訓練系統</strong>
+                    <span>針對老年失智症患者設計虛擬乘車體驗，以 Unity (C#) 結合 VRTK 與 SteamVR 驅動 HTC VIVE
+                      頭顯。設計目標站點記憶、票價計算找零與遺失物交還站務人員等多維任務，訓練患者獨立生活與問題應對能力。</span>
+                  </div>
+                </div>
+
+                <div class="exp-bullet-item">
+                  <div class="bullet-dot bullet-dot-blue"></div>
+                  <div class="bullet-content">
+                    <strong>VR 戒癮刺激與腦波 (EEG) 動態訊號分析研究</strong>
+                    <span>探討病患在接受 VR 戒癮刺激前後之大腦皮質電位動態變化。運用 Python 與 MATLAB 進行信號濾波、眼動/肌電干擾去除、連續小波轉換 (CWT) 與基線校正，並導入
+                      CNN、EEGNet 等機器學習模型與 SPSS 統計驗證風險腦區與頻帶。</span>
+                  </div>
+                </div>
+
+                <div class="exp-bullet-item">
+                  <div class="bullet-dot bullet-dot-blue"></div>
+                  <div class="bullet-content">
+                    <strong>VR 虛擬教室與持續注意力 (CPT) 腦波評估</strong>
+                    <span>構建沉浸式 VR 虛擬教室實施持續表現測驗 (Continuous Performance Test, CPT)
+                      並同步量測腦電訊號。透過特徵工程分析視覺干擾對專注力之影響，並結合機器學習模型驗證干擾對注意力的神經生理指標。</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="research-tags">
+                <span class="rtag">⚡ 即時數位信號處理 (DSP)</span>
+                <span class="rtag">🧠 生理反饋機制 (Biofeedback)</span>
+                <span class="rtag">👓 虛擬實境人機互動 (VR / HCI)</span>
+                <span class="rtag">🎮 Unity (C#) & SteamVR</span>
+                <span class="rtag">🐍 Python & MATLAB</span>
+                <span class="rtag">🤖 機器學習 (EEGNet / CNN)</span>
+                <span class="rtag">📊 SPSS 統計驗證</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. Featured Interactive Works Section: AI Game Development -->
+    <section class="section works-section" id="featured-works">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag section-tag-pulse">AI-Assisted Game Prototyping & Development</div>
+          <h2 class="section-title">精選核心作品：AI Game 開發經歷</h2>
+          <p class="section-subtitle">
+            這 3 款遊戲作品全程深度結合現代生成式 AI 工具鏈，展現從概念到落地的極致個人研發效率。點擊即可於<strong>瀏覽器中直接試玩</strong>。
+          </p>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+
+          <!-- Game Project 1: GreedTemple -->
+          <article class="project-card" id="project-greed-temple">
+            <div class="project-poster-wrapper">
+              <img src="./assets/greed-temple.jpg" alt="GreedTemple 遊戲封面展示" class="project-poster" loading="lazy" />
+              <div class="poster-overlay">
+                <span class="live-badge">AI 賦能開發・Cloud Run</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tag-bar">
+                <span class="genre-tag">AI 輔助獨立研發</span>
+                <span class="genre-tag tag-accent">Roguelike 遺跡探索</span>
+              </div>
+
+              <h3 class="project-title">GreedTemple (貪婪神廟)</h3>
+
+              <p class="project-pitch">
+                深度導入 AI 協同開發工作流：透過 AI 進行地城數值曲線設計、隨機房間生成邏輯重構與快速代碼迭代，並輔助生成概念氛圍海報與視覺素材，高效完成從玩法構想、雲端部署到即時運行的完整閉環。
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">AI 協同開發</span>
+                <span class="tech-pill">Unity</span>
+                <span class="tech-pill">C#</span>
+                <span class="tech-pill">GCP Cloud Run</span>
+              </div>
+
+              <div class="project-cta-wrap">
+                <a href="https://greedtemple-311470842578.asia-east1.run.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-game-play" id="play-btn-greed-temple" data-game-title="GreedTemple (貪婪神廟)"
+                  data-game-url="https://greedtemple-311470842578.asia-east1.run.app/">
+                  <span class="btn-play-icon">▶</span>
+                  <span class="btn-text">線上直接試玩 (Play in Browser)</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Game Project 2: 蛇來蛇去 -->
+          <article class="project-card" id="project-snake-tetris">
+            <div class="project-poster-wrapper">
+              <img src="./assets/snake-tetris.jpg" alt="蛇來蛇去 遊戲封面展示" class="project-poster" loading="lazy" />
+              <div class="poster-overlay">
+                <span class="live-badge">AI 核心創新・Cloud Run</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tag-bar">
+                <span class="genre-tag">AI 輔助機制創新</span>
+                <span class="genre-tag tag-accent">貪食蛇 × 俄羅斯方塊</span>
+              </div>
+
+              <h3 class="project-title">蛇來蛇去 (Snake Tetris)</h3>
+
+              <p class="project-pitch">
+                結合 AI 程式碼輔助重構與快速機制原型驗證，巧妙將經典貪食蛇的機動走位與俄羅斯方塊的空間消行邏輯結合；借助 AI 工具加速碰撞矩陣判斷與計分演算法調校，以極高效率完成輕量流暢的創新雙核心遊戲體驗。
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">AI 原型迭代</span>
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">HTML5 Canvas</span>
+                <span class="tech-pill">GCP Cloud Run</span>
+              </div>
+
+              <div class="project-cta-wrap">
+                <a href="https://snake-tetris-32984756579.asia-east1.run.app/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-game-play" id="play-btn-snake-tetris" data-game-title="蛇來蛇去 (Snake Tetris)"
+                  data-game-url="https://snake-tetris-32984756579.asia-east1.run.app/">
+                  <span class="btn-play-icon">▶</span>
+                  <span class="btn-text">線上直接試玩 (Play in Browser)</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Game Project 3: ElementSurvivor -->
+          <article class="project-card" id="project-element-survivor">
+            <div class="project-poster-wrapper">
+              <img src="./assets/element-survivor.jpg" alt="ElementSurvivor 遊戲封面展示" class="project-poster"
+                loading="lazy" />
+              <div class="poster-overlay">
+                <span class="live-badge">AI 數值平衡・Unity Play</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-tag-bar">
+                <span class="genre-tag">AI 輔助技能設計</span>
+                <span class="genre-tag tag-accent">割草 Roguelite</span>
+              </div>
+
+              <h3 class="project-title">ElementSurvivor (元素倖存者)</h3>
+
+              <p class="project-pitch">
+                在多元素合成與技能封印機制的設計中，運用 AI 協助規劃九重印訣施法邏輯與怪物彈幕波次數值；結合物件池管理與渲染批次架構，兼具豐富技能流派演繹與極速流暢打擊反饋。
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-pill">AI 數值平衡</span>
+                <span class="tech-pill">Unity 3D</span>
+                <span class="tech-pill">C#</span>
+                <span class="tech-pill">Shader Graph</span>
+                <span class="tech-pill">Unity Play</span>
+              </div>
+
+              <div class="project-cta-wrap">
+                <a href="https://play.unity.com/en/games/0e121b82-8f17-426b-8b15-3cb9d3f72570/elementsurvivor"
+                  target="_blank" rel="noopener noreferrer" class="btn btn-game-play" id="play-btn-element-survivor"
+                  data-game-title="ElementSurvivor (元素倖存者)"
+                  data-game-url="https://play.unity.com/en/games/0e121b82-8f17-426b-8b15-3cb9d3f72570/elementsurvivor">
+                  <span class="btn-play-icon">▶</span>
+                  <span class="btn-text">線上直接試玩 (Play in Browser)</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Clean Footer (No Social Links) -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">李育齊 (Yu-Chi Li)</span>
+        <span class="footer-copy">© 2025 All Rights Reserved. Engineered for Performance & Quality.</span>
+      </div>
+      <div class="footer-right">
+        <button class="btn btn-secondary-glass" id="btn-view-resume"
+          style="padding: 6px 14px; font-size: 0.82rem; border-radius: 8px;">
+          <span class="btn-icon">📄</span>
+          <span>檢視經歷摘要</span>
+        </button>
+        <a href="#hero" class="back-to-top-btn" id="btn-back-to-top" aria-label="返回頂端">
+          <span>回到頂端</span>
+          <span class="arrow-up">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Resume Preview Modal -->
+  <div class="modal-backdrop" id="resume-modal" aria-hidden="true" role="dialog" aria-labelledby="resume-modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge">CURRICULUM VITAE</span>
+          <h3 class="modal-title" id="resume-modal-title">李育齊 (Yu-Chi Li) - 經歷摘要</h3>
+        </div>
+        <button class="modal-close-btn" id="resume-modal-close" aria-label="關閉視窗">✕</button>
+      </div>
+      <div class="modal-body resume-body">
+        <div class="resume-meta-bar">
+          <div><strong>定位：</strong> 資深軟體研發工程師 (5+ yrs) / XR Middleware / SDET / TPM</div>
+          <div><strong>現職經歷：</strong> 宏達國際電子 (HTC) - RD 軟體工程師 (2021/04 – 2026/02・5 年)</div>
+          <div><strong>信箱：</strong> yuchi.li.dev@gmail.com</div>
+          <div><strong>學歷：</strong> 國立中央大學 軟體工程碩士</div>
+        </div>
+
+        <h4 class="resume-section-heading">產業工作經歷 (Professional Experience)</h4>
+        <div class="resume-exp-block">
+          <div class="resume-exp-head">
+            <span class="company-name">宏達國際電子股份有限公司 (HTC) — 軟體研發工程師 (RD)</span>
+            <span class="role-tenure">2021/04 – 2026/02 (5 年)</span>
+          </div>
+          <ul class="resume-bullet-list" style="margin-bottom: 0;">
+            <li><strong>Android OEM 系統層應用與多媒體管線：</strong> 負責 VR 裝置之 OEM 系統級應用與 System UI 全生命週期維護，排查硬體事件分發 (Input
+              Dispatching) 與穩定度問題；整合原生截圖錄影、Miracast 無線投屏與 RTMP 即時推流功能。</li>
+            <li><strong>WaveXR & OpenXR 跨平台 SDK 架構客製：</strong> 維護與擴充雙版本 Unity SDK，設計新硬體配件輸入事件映射與自訂擴充功能，確保底層驅動至 Unity C#
+              API 的高相容性與熱插拔穩定度。</li>
+            <li><strong>Unity 3D 執行期深度效能調優 (VIVE Sync)：</strong> 負責企業級 VR 專案效能攻堅。善用 Unity / Snapdragon Profiler
+              定位瓶頸，優化記憶體拷貝管線、RenderTexture 生命週期管理、推動 ASTC 壓縮規範與 Occlusion Culling，消除卡頓並壓制記憶體峰值。</li>
+          </ul>
+        </div>
+
+        <h4 class="resume-section-heading">學術與研發專案實績 (Academic & Research Highlights)</h4>
+        <div class="resume-exp-block" style="border-left-color: #38bdf8;">
+          <div class="resume-exp-head">
+            <span class="company-name">國立中央大學 (NCU) — 軟體工程碩士</span>
+            <span class="role-tenure" style="color: #38bdf8;">2018 – 2020</span>
+          </div>
+          <ul class="resume-bullet-list" style="margin-bottom: 0;">
+            <li><strong>Virtual Subway 虛擬地鐵失智症認知訓練系統：</strong> 以 Unity (C#) 結合 VRTK 與 SteamVR 驅動 HTC VIVE
+              頭顯，針對失智症患者設計站點記憶、票價計算找零與遺失物應對等多維度認知訓練。</li>
+            <li><strong>VR 戒癮刺激與腦波 (EEG) 動態訊號分析研究：</strong> 運用 Python 與 MATLAB 進行腦波前處理（眼電去噪、CWT 連續小波轉換、基線校正），導入
+              CNN、EEGNet 等機器學習模型與 SPSS 統計驗證。</li>
+            <li><strong>VR 虛擬教室與持續注意力 (CPT) 腦波評估：</strong> 於 VR 虛擬教室進行持續性表現測驗 (CPT)，同步擷取腦電訊號並透過特徵工程與機器學習分析環境干擾對專注力之影響。
+            </li>
+          </ul>
+        </div>
+
+        <h4 class="resume-section-heading">未來職涯目標與展望 (Career Vision)</h4>
+        <div class="resume-vision-text">
+          將過去 5 年對「系統邊界、底層除錯與效能瓶頸」的工程直覺，延伸至產品質量把關（SDET / 系統測試）、功能規劃與技術可行性評估
+          (TPM)。跳脫單純功能代碼實作，在需求初期定義驗收標準與極端異常情境，透過扎實的白箱測試與性能壓測確保產品高穩定度，成為團隊中連結產品規劃與工程落地的關鍵推手。
+        </div>
+
+        <h4 class="resume-section-heading">AI Game 賦能獨立研發實績</h4>
+        <ul class="resume-bullet-list">
+          <li><strong>GreedTemple / 蛇來蛇去 / ElementSurvivor：</strong> 深度運用生成式 AI 工具鏈完成 3
+            款可於瀏覽器即時試玩的遊戲作品之玩法驗證、代碼重構、數值調校與雲端容器化部署。</li>
+        </ul>
+
+        <div class="resume-footer-actions">
+          <button class="btn btn-primary-pulse" id="btn-print-resume">列印 / 存為 PDF</button>
+          <a href="mailto:yuchi.li.dev@gmail.com?subject=索取完整履歷與交流_李育齊" class="btn btn-secondary-glass">郵件索取詳細版 PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
