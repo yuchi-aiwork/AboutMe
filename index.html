@@ -138,14 +138,14 @@
   ],
   <span class="code-prop">aiGameWorks</span>: [
     <span class="code-str">"GreedTemple"</span>,
-    <span class="code-str">"蛇來蛇去"</span>,
+    <span class="code-str">"Tetris Snake Racing"</span>,
     <span class="code-str">"ElementSurvivor"</span>
   ]
 };</code></pre>
             </div>
             <div class="tech-card-footer">
               <div class="badge-tag"><span class="icon">🎮</span> Unity Engine</div>
-              <div class="badge-tag"><span class="icon">📱</span> AOSP</div>
+              <div class="badge-tag"><span class="icon">📱</span> Android framework</div>
               <div class="badge-tag"><span class="icon">🤖</span> AI Game Prototyping</div>
             </div>
           </div>
@@ -193,7 +193,7 @@
             <div class="narrative-step">STAGE 02</div>
             <h3 class="narrative-title">底層磨練與架構自覺</h3>
             <ul class="narrative-list">
-              <li><strong>AOSP</strong>：WaveXR Runtime、VRSystem Service (OEM)。</li>
+              <li><strong>Android framework</strong>：WaveXR Runtime、VRSystem Service (OEM)。</li>
               <li><strong>Unity (維護為主)</strong>：ViveSync、ViveWaveXR Plugin、ViveOpenXR Plugin。</li>
             </ul>
             <div class="narrative-highlight">
@@ -301,14 +301,14 @@
               <div class="pai-block pai-action">
                 <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
                 <p>
-                  主導 WaveXR 與 OpenXR 雙版本 Unity SDK 介面擴充；設計解耦的硬體事件抽象分發層與轉接機制，支援外設熱插拔與即時鍵位映射，並建立健全的邊界測試防護。
+                  主導 WaveXR 與 OpenXR 雙版本 Unity SDK 介面擴充，支援外設熱插拔與即時鍵位映射。
                 </p>
               </div>
 
               <div class="pai-block pai-impact">
                 <div class="pai-badge"><span class="badge-dot-green"></span> 交付成果與價值</div>
                 <p>
-                  快速打通多家企業客戶的新硬體周邊對接，顯著縮減新裝置適配週期，提供企業開發者高可靠度與長期向下相容的 SDK 整合體驗。
+                  打通多家企業客戶的新硬體周邊對接，提供企業開發者高可靠度與長期向下相容的 SDK 整合體驗。
                 </p>
               </div>
             </div>
@@ -330,22 +330,21 @@
               <div class="pai-block pai-problem">
                 <div class="pai-badge"><span class="badge-dot-red"></span> 專案挑戰與目標</div>
                 <p>
-                  在 VIVE Sync 跨國多人虛擬會議應用中，用戶拍攝高解析快照時容易引發瞬時卡頓與雙倍 RenderTexture 記憶體峰值，影響商務協作流暢度。
+                  在 VIVE Sync 跨國多人虛擬會議應用中，進行 memory 與 performance 的優化，確保多人場景下仍有流暢的互動體驗。
                 </p>
               </div>
 
               <div class="pai-block pai-action">
                 <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
                 <p>
-                  透過 Unity Profiler、Memory Profiler 與 Android Logcat 定位 CPU-GPU 傳輸與記憶體拷貝瓶頸；導入 ASTC 紋理壓縮規範、動態降採樣機制與視野遮擋剔除
-                  (Occlusion Culling)。
+                  透過 Unity Profiler 與 Memory Profiler 定位 CPU-GPU 傳輸與記憶體拷貝瓶頸；導入 ASTC 紋理壓縮規範、動態降採樣機制與視野遮擋剔除。
                 </p>
               </div>
 
               <div class="pai-block pai-impact">
                 <div class="pai-badge"><span class="badge-dot-green"></span> 交付成果與價值</div>
                 <p>
-                  全面消除快照時的卡頓現象並顯著抑制記憶體峰值，徹底解決獨立 VR 一體機在長時間多人群聚會議中的掉幀與穩定性問題。
+                  有效緩解記憶體與 CPU/GPU 壓力，避免多人場景下的卡頓與畫質下降，提升整體互動體驗。
                 </p>
               </div>
             </div>
@@ -362,7 +361,7 @@
 
         <div class="section-header text-center">
           <div class="section-tag">Core Competencies</div>
-          <h2 class="section-title">核心技術能力矩陣</h2>
+          <h2 class="section-title">核心技術能力</h2>
         </div>
 
         <div class="skills-matrix-grid">
@@ -374,15 +373,13 @@
               <h3 class="category-title">Programming Languages</h3>
             </div>
             <div class="skills-tags-wrap">
-              <div class="skill-item"><span class="skill-name">C#</span><span class="skill-exp">精通 / Unity</span></div>
-              <div class="skill-item"><span class="skill-name">Java</span><span class="skill-exp">Android
+              <div class="skill-item"><span class="skill-name">C#</span><span class="skill-exp">Unity</span></div>
+              <div class="skill-item"><span class="skill-name">Java / Kotlin</span><span class="skill-exp">Android
                   Framework</span></div>
               <div class="skill-item"><span class="skill-name">C / C++</span><span class="skill-exp">NDK / 底層通訊</span>
               </div>
               <div class="skill-item"><span class="skill-name">Python</span><span class="skill-exp">自動化腳本 / 數據</span>
               </div>
-              <div class="skill-item"><span class="skill-name">TypeScript / JS</span><span class="skill-exp">Web
-                  遊戲與互動</span></div>
             </div>
           </div>
 
@@ -401,10 +398,6 @@
                   SDK 整合</span></div>
               <div class="skill-item"><span class="skill-name">VR/XR HMDs</span><span class="skill-exp">Standalone &
                   PCVR</span></div>
-              <div class="skill-item"><span class="skill-name">IPC & Architecture</span><span class="skill-exp">AIDL /
-                  跨程序通訊</span></div>
-              <div class="skill-item"><span class="skill-name">GCP Cloud Run</span><span
-                  class="skill-exp">容器化遊戲部署</span></div>
             </div>
           </div>
 
@@ -423,8 +416,6 @@
                   壓減</span></div>
               <div class="skill-item"><span class="skill-name">Android Logcat / ADB</span><span
                   class="skill-exp">底層排錯與自動化</span></div>
-              <div class="skill-item"><span class="skill-name">RenderDoc / GLES</span><span
-                  class="skill-exp">繪圖管線幀分析</span></div>
               <div class="skill-item"><span class="skill-name">System Tracing</span><span class="skill-exp">Systrace /
                   Perfetto</span></div>
             </div>
@@ -445,8 +436,6 @@
                   無線投屏</span></div>
               <div class="skill-item"><span class="skill-name">Surface Lifecycle</span><span
                   class="skill-exp">雙緩衝與紋理共享</span></div>
-              <div class="skill-item"><span class="skill-name">EGL / GLES Context</span><span
-                  class="skill-exp">跨執行緒繪圖資源</span></div>
             </div>
           </div>
 
@@ -483,7 +472,7 @@
 
               <div class="experience-meta-box">
                 <div class="exp-meta-item">
-                  <strong>系統與平台：</strong> Android OS (System UI / OEM Service), VR/XR HMDs (Standalone & PCVR), IPC
+                  <strong>系統與平台：</strong> Android OS (System UI / OEM Service), VR/XR HMDs (Standalone & PCVR)
                 </div>
                 <div class="exp-meta-item">
                   <strong>引擎與 SDK：</strong> Unity (C#), WaveXR SDK, OpenXR, Android NDK/SDK
@@ -498,8 +487,7 @@
             <div class="experience-details">
               <h4 class="exp-scope-title">核心範疇：Android 系統服務、WaveXR/OpenXR SDK 客製化與 Unity 執行期調優</h4>
               <p class="exp-desc">
-                於 HTC 擔任軟體研發工程師近 5 年，橫跨底層 Android OEM 系統服務到上層 Unity 應用渲染管線。熟悉 VR 軟硬整合流程與跨程序通訊 (IPC)，具備系統事件分發 (Input
-                Dispatching) 與執行期效能瓶頸的第一線深度除錯排查實力。
+                於 HTC 擔任軟體研發工程師近 5 年，橫跨底層 Android OEM 系統服務到上層 Unity 應用渲染管線。
               </p>
 
               <div class="exp-bullet-group">
@@ -517,7 +505,7 @@
                   <div class="bullet-content">
                     <strong>XR 跨平台 SDK 架構客製化與硬體整合</strong>
                     <span>維護與擴充 WaveXR 及 Wave OpenXR Unity SDK，針對新硬體配件設計輸入事件映射與擴充功能，確保底層驅動至 Unity C# API
-                      的高相容性、熱插拔機制與企業客戶穩定度。</span>
+                      的高相容性。</span>
                   </div>
                 </div>
 
@@ -525,7 +513,7 @@
                   <div class="bullet-dot"></div>
                   <div class="bullet-content">
                     <strong>Unity 3D 執行期深度優化 (VIVE Sync)</strong>
-                    <span>主導企業級虛擬協作 VR 專案「VIVE Sync」之效能與記憶體調校。善用 Profiler 工具定位瓶頸，優化記憶體拷貝管線、RenderTexture 生命週期管理、推動 ASTC
+                    <span>VR 專案「VIVE Sync」之效能與記憶體調校。善用 Profiler 工具定位瓶頸，優化記憶體拷貝管線、RenderTexture 生命週期管理、推動 ASTC
                       壓縮規範及引入 Occlusion Culling，有效消除操作卡頓並降低記憶體峰值。</span>
                   </div>
                 </div>
@@ -536,7 +524,6 @@
                 <span class="etag">🥽 WaveXR & OpenXR SDK</span>
                 <span class="etag">🎮 Unity Engine (C#)</span>
                 <span class="etag">⚡ Snapdragon & Unity Profiler</span>
-                <span class="etag">🔬 RenderDoc / GLES</span>
                 <span class="etag">🎬 MediaCodec & RTMP</span>
                 <span class="etag">🔄 IPC & Draw Call Batching</span>
               </div>
@@ -633,7 +620,7 @@
           <div class="section-tag section-tag-pulse">AI-Assisted Game Prototyping & Development</div>
           <h2 class="section-title">精選核心作品：AI Game 開發經歷</h2>
           <p class="section-subtitle">
-            這 3 款遊戲作品全程深度結合現代生成式 AI 工具鏈，展現從概念到落地的極致個人研發效率。點擊即可於<strong>瀏覽器中直接試玩</strong>。
+            這 3 款遊戲作品幾乎由Cursor與Antigravity協助開發完成。
           </p>
         </div>
 
@@ -642,31 +629,18 @@
           <!-- Game Project 1: GreedTemple -->
           <article class="project-card" id="project-greed-temple">
             <div class="project-poster-wrapper">
-              <img src="./public/assets/GreedTemple.png" alt="GreedTemple 遊戲封面展示" class="project-poster" loading="lazy" />
+              <img src="./public/assets/GreedTemple.png" alt="GreedTemple 遊戲封面展示" class="project-poster"
+                loading="lazy" />
               <div class="poster-overlay">
-                <span class="live-badge">AI 賦能開發・Cloud Run</span>
+                <span class="live-badge">印加寶藏</span>
               </div>
             </div>
 
             <div class="project-content">
-              <div class="project-tag-bar">
-                <span class="genre-tag">AI 輔助獨立研發</span>
-                <span class="genre-tag tag-accent">Roguelike 遺跡探索</span>
-              </div>
-
-              <h3 class="project-title">GreedTemple (貪婪神廟)</h3>
-
+              <h3 class="project-title">GreedTemple</h3>
               <p class="project-pitch">
-                深度導入 AI 協同開發工作流：透過 AI 進行地城數值曲線設計、隨機房間生成邏輯重構與快速代碼迭代，並輔助生成概念氛圍海報與視覺素材，高效完成從玩法構想、雲端部署到即時運行的完整閉環。
+                3~8人連線 Web 派對遊戲。玩家組成探險隊進入印加詛咒神廟，在每一層秘密決定繼續深入或帶走財寶撤退。
               </p>
-
-              <div class="project-tech-stack">
-                <span class="tech-pill">AI 協同開發</span>
-                <span class="tech-pill">Unity</span>
-                <span class="tech-pill">C#</span>
-                <span class="tech-pill">GCP Cloud Run</span>
-              </div>
-
               <div class="project-cta-wrap">
                 <a href="https://greedtemple-311470842578.asia-east1.run.app/" target="_blank" rel="noopener noreferrer"
                   class="btn btn-game-play" id="play-btn-greed-temple" data-game-title="GreedTemple (貪婪神廟)"
@@ -678,38 +652,24 @@
             </div>
           </article>
 
-          <!-- Game Project 2: 蛇來蛇去 -->
+          <!-- Game Project 2: Tetris Snake Racing -->
           <article class="project-card" id="project-snake-tetris">
             <div class="project-poster-wrapper">
-              <img src="./public/assets/SnakeTetris.png" alt="蛇來蛇去 遊戲封面展示" class="project-poster" loading="lazy" />
+              <img src="./public/assets/TetrisSnakeRacing.png" alt="Tetris Snake Racing 遊戲封面展示" class="project-poster" loading="lazy" />
               <div class="poster-overlay">
-                <span class="live-badge">AI 核心創新・Cloud Run</span>
+                <span class="live-badge">貪食蛇 × 俄羅斯方塊</span>
               </div>
             </div>
 
             <div class="project-content">
-              <div class="project-tag-bar">
-                <span class="genre-tag">AI 輔助機制創新</span>
-                <span class="genre-tag tag-accent">貪食蛇 × 俄羅斯方塊</span>
-              </div>
-
-              <h3 class="project-title">蛇來蛇去 (Snake Tetris)</h3>
+              <h3 class="project-title">Tetris Snake Racing</h3>
 
               <p class="project-pitch">
-                結合 AI 程式碼輔助重構與快速機制原型驗證，巧妙將經典貪食蛇的機動走位與俄羅斯方塊的空間消行邏輯結合；借助 AI 工具加速碰撞矩陣判斷與計分演算法調校，以極高效率完成輕量流暢的創新雙核心遊戲體驗。
+                2D 像素風橫向競速遊戲，融合貪吃蛇路徑成長與俄羅斯方塊障礙機制，1v1 對戰，誰先抵達終點誰就贏。
               </p>
-
-              <div class="project-tech-stack">
-                <span class="tech-pill">AI 原型迭代</span>
-                <span class="tech-pill">TypeScript</span>
-                <span class="tech-pill">React</span>
-                <span class="tech-pill">HTML5 Canvas</span>
-                <span class="tech-pill">GCP Cloud Run</span>
-              </div>
-
               <div class="project-cta-wrap">
                 <a href="https://snake-tetris-32984756579.asia-east1.run.app/" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-game-play" id="play-btn-snake-tetris" data-game-title="蛇來蛇去 (Snake Tetris)"
+                  class="btn btn-game-play" id="play-btn-snake-tetris" data-game-title="Tetris Snake Racing"
                   data-game-url="https://snake-tetris-32984756579.asia-east1.run.app/">
                   <span class="btn-play-icon">▶</span>
                   <span class="btn-text">線上直接試玩 (Play in Browser)</span>
@@ -724,30 +684,16 @@
               <img src="./public/assets/ElementSurvivor.png" alt="ElementSurvivor 遊戲封面展示" class="project-poster"
                 loading="lazy" />
               <div class="poster-overlay">
-                <span class="live-badge">AI 數值平衡・Unity Play</span>
+                <span class="live-badge">倖存者 x 五行結印</span>
               </div>
             </div>
 
             <div class="project-content">
-              <div class="project-tag-bar">
-                <span class="genre-tag">AI 輔助技能設計</span>
-                <span class="genre-tag tag-accent">割草 Roguelite</span>
-              </div>
-
-              <h3 class="project-title">ElementSurvivor (元素倖存者)</h3>
+              <h3 class="project-title">ElementSurvivor</h3>
 
               <p class="project-pitch">
-                在多元素合成與技能封印機制的設計中，運用 AI 協助規劃九重印訣施法邏輯與怪物彈幕波次數值；結合物件池管理與渲染批次架構，兼具豐富技能流派演繹與極速流暢打擊反饋。
+                結合五行與吸血鬼倖存者，玩家透過結印對8個不同方向丟出技能，每個敵人都有不同屬性，透過克制的屬性高效率的擊敗敵人，打贏最終頭目。
               </p>
-
-              <div class="project-tech-stack">
-                <span class="tech-pill">AI 數值平衡</span>
-                <span class="tech-pill">Unity 3D</span>
-                <span class="tech-pill">C#</span>
-                <span class="tech-pill">Shader Graph</span>
-                <span class="tech-pill">Unity Play</span>
-              </div>
-
               <div class="project-cta-wrap">
                 <a href="https://play.unity.com/en/games/0e121b82-8f17-426b-8b15-3cb9d3f72570/elementsurvivor"
                   target="_blank" rel="noopener noreferrer" class="btn btn-game-play" id="play-btn-element-survivor"
@@ -846,7 +792,7 @@
 
         <h4 class="resume-section-heading">AI Game 賦能獨立研發實績</h4>
         <ul class="resume-bullet-list">
-          <li><strong>GreedTemple / 蛇來蛇去 / ElementSurvivor：</strong> 深度運用生成式 AI 工具鏈完成 3
+          <li><strong>GreedTemple / Tetris Snake Racing / ElementSurvivor：</strong> 深度運用生成式 AI 工具鏈完成 3
             款可於瀏覽器即時試玩的遊戲作品之玩法驗證、代碼重構、數值調校與雲端容器化部署。</li>
         </ul>
 
