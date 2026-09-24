@@ -51,10 +51,10 @@
 
       <nav class="main-nav" id="main-nav" aria-label="主要導覽選單">
         <ul class="nav-links">
-          <li><a href="#engineering-impact" class="nav-link" id="nav-link-impact">核心專案實績</a></li>
-          <li><a href="#core-skills" class="nav-link" id="nav-link-skills">能力矩陣</a></li>
           <li><a href="#experience" class="nav-link" id="nav-link-experience">歷練與學術</a></li>
+          <li><a href="#engineering-impact" class="nav-link" id="nav-link-impact">核心專案實績</a></li>
           <li><a href="#featured-works" class="nav-link" id="nav-link-works">AI Game 作品</a></li>
+          <li><a href="#core-skills" class="nav-link" id="nav-link-skills">能力矩陣</a></li>
         </ul>
       </nav>
 
@@ -74,10 +74,10 @@
     <!-- Mobile Dropdown Menu -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <ul class="mobile-nav-links">
-        <li><a href="#engineering-impact" class="mobile-nav-link">⚙️ 代表性核心專案</a></li>
-        <li><a href="#core-skills" class="mobile-nav-link">⚡ 核心技術矩陣</a></li>
         <li><a href="#experience" class="mobile-nav-link">💼 歷練與學術歷程</a></li>
+        <li><a href="#engineering-impact" class="mobile-nav-link">⚙️ 代表性核心專案</a></li>
         <li><a href="#featured-works" class="mobile-nav-link">🤖 AI Game 作品試玩</a></li>
+        <li><a href="#core-skills" class="mobile-nav-link">⚡ 核心技術矩陣</a></li>
         <li><a href="mailto:yuchi.li.dev@gmail.com" class="mobile-nav-link">✉️ 聯絡我 (Email)</a></li>
       </ul>
       <div class="mobile-menu-cta">
@@ -192,220 +192,7 @@
       </div>
     </section>
 
-    <!-- 3. Key Engineering Projects Section -->
-    <section class="section impact-section" id="engineering-impact">
-      <div class="container">
-
-        <div class="section-header text-center">
-          <div class="section-tag">Core Engineering Projects</div>
-          <h2 class="section-title">代表性工程實績與核心專案</h2>
-        </div>
-
-        <div class="impact-cards-stack">
-
-          <!-- Case Study 1 -->
-          <div class="impact-card" id="case-study-rtmp">
-            <div class="impact-card-header">
-              <div class="impact-index">PROJECT 01</div>
-              <h3 class="impact-headline">VR 系統級多媒體管線與 RTMP 直播系統</h3>
-              <div class="impact-metrics-pill">
-                <span class="metric-highlight">Android MediaCodec</span>
-                <span class="metric-highlight">RTMP 串流協定</span>
-                <span class="metric-highlight">Wi-Fi Display miracast</span>
-              </div>
-            </div>
-
-            <div class="pai-grid">
-              <div class="pai-block pai-problem">
-                <div class="pai-badge"><span class="badge-dot-red"></span> 專案目標</div>
-                <p>
-                  在系統層級重構並整合miracast讓玩家決定輸出為YT直播或是miracast投屏，而非傳統將畫面轉送到PC再直播的方式，並確保直播推流穩定性與降低延遲。
-                </p>
-              </div>
-
-              <div class="pai-block pai-action">
-                <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
-                <p>
-                  整合 Android <code>MediaCodec</code> 硬體編碼與 RTMP 協定；處理單眼畫面裁切與解析度;重構並整合miracast功能
-                </p>
-              </div>
-
-              <div class="pai-block pai-impact">
-                <div class="pai-badge"><span class="badge-dot-green"></span> 交付成果與價值</div>
-                <p>
-                  成功實現 VR 頭顯低延遲 YouTube 直播、原生錄影與 Miracast 無線投屏，確保前台 3D 渲染與背景多媒體管線互不干擾、長期穩定運行。
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Case Study 2 -->
-          <div class="impact-card" id="case-study-xr-sdk">
-            <div class="impact-card-header">
-              <div class="impact-index">PROJECT 02</div>
-              <h3 class="impact-headline">WaveXR / OpenXR 跨平台 Unity SDK 架構與硬體整合</h3>
-              <div class="impact-metrics-pill">
-                <span class="metric-highlight">商業級 XR SDK</span>
-                <span class="metric-highlight">硬體抽象轉接層</span>
-                <span class="metric-highlight">跨平台架構擴充</span>
-              </div>
-            </div>
-
-            <div class="pai-grid">
-              <div class="pai-block pai-problem">
-                <div class="pai-badge"><span class="badge-dot-red"></span> 專案挑戰與目標</div>
-                <p>
-                  面對新世代 XR 控制器按鍵配置、空間定位與周邊硬體快速迭代，既有企業客戶 SDK 存在相容性碎片化與事件分發維護成本高的瓶頸。
-                </p>
-              </div>
-
-              <div class="pai-block pai-action">
-                <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
-                <p>
-                  主導 WaveXR 與 OpenXR 雙版本 Unity SDK 介面擴充，支援外設熱插拔與即時鍵位映射。
-                </p>
-              </div>
-
-              <div class="pai-block pai-impact">
-                <div class="pai-badge"><span class="badge-dot-green"></span> 交付成果與價值</div>
-                <p>
-                  打通多家企業客戶的新硬體周邊對接，提供企業開發者高可靠度與長期向下相容的 SDK 整合體驗。
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Case Study 3 -->
-          <div class="impact-card" id="case-study-vive-sync">
-            <div class="impact-card-header">
-              <div class="impact-index">PROJECT 03</div>
-              <h3 class="impact-headline">VIVE Sync 企業級虛擬協作效能調優</h3>
-              <div class="impact-metrics-pill">
-                <span class="metric-highlight">Unity 效能調優</span>
-                <span class="metric-highlight">記憶體架構重構</span>
-                <span class="metric-highlight">遮擋剔除 (Occlusion Culling)</span>
-              </div>
-            </div>
-
-            <div class="pai-grid">
-              <div class="pai-block pai-problem">
-                <div class="pai-badge"><span class="badge-dot-red"></span> 專案挑戰與目標</div>
-                <p>
-                  在 VIVE Sync 跨國多人虛擬會議應用中，進行 memory 與 performance 的優化，確保多人場景下仍有流暢的互動體驗。
-                </p>
-              </div>
-
-              <div class="pai-block pai-action">
-                <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
-                <p>
-                  透過 Unity Profiler 與 Memory Profiler 定位 CPU-GPU 傳輸與記憶體拷貝瓶頸；導入 ASTC 紋理壓縮規範、動態降採樣機制與視野遮擋剔除。
-                </p>
-              </div>
-
-              <div class="pai-block pai-impact">
-                <div class="pai-badge"><span class="badge-dot-green"></span> 交付成果與價值</div>
-                <p>
-                  有效緩解記憶體與 CPU/GPU 壓力，避免多人場景下的卡頓與畫質下降，提升整體互動體驗。
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 4. Core Competencies & Skills Section -->
-    <section class="section skills-section" id="core-skills">
-      <div class="container">
-
-        <div class="section-header text-center">
-          <div class="section-tag">Core Competencies</div>
-          <h2 class="section-title">核心技術能力</h2>
-        </div>
-
-        <div class="skills-matrix-grid">
-
-          <!-- Category 1: Languages -->
-          <div class="skill-category-card" id="skill-cat-languages">
-            <div class="category-header">
-              <span class="category-icon">💻</span>
-              <h3 class="category-title">Programming Languages</h3>
-            </div>
-            <div class="skills-tags-wrap">
-              <div class="skill-item"><span class="skill-name">C#</span><span class="skill-exp">Unity</span></div>
-              <div class="skill-item"><span class="skill-name">Java / Kotlin</span><span class="skill-exp">Android
-                  Framework</span></div>
-              <div class="skill-item"><span class="skill-name">C / C++</span><span class="skill-exp">NDK / 底層通訊</span>
-              </div>
-              <div class="skill-item"><span class="skill-name">Python</span><span class="skill-exp">自動化腳本 / 數據</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Category 2: Platforms & Frameworks -->
-          <div class="skill-category-card" id="skill-cat-platforms">
-            <div class="category-header">
-              <span class="category-icon">📱</span>
-              <h3 class="category-title">Platforms & Frameworks</h3>
-            </div>
-            <div class="skills-tags-wrap">
-              <div class="skill-item"><span class="skill-name">Android OS</span><span class="skill-exp">System UI / OEM
-                  Service</span></div>
-              <div class="skill-item"><span class="skill-name">Unity Engine</span><span class="skill-exp">2D/3D /
-                  Runtime</span></div>
-              <div class="skill-item"><span class="skill-name">WaveXR & OpenXR</span><span class="skill-exp">HTC VIVE
-                  SDK 整合</span></div>
-              <div class="skill-item"><span class="skill-name">VR/XR HMDs</span><span class="skill-exp">Standalone &
-                  PCVR</span></div>
-            </div>
-          </div>
-
-          <!-- Category 3: Testing & Diagnostics -->
-          <div class="skill-category-card" id="skill-cat-diagnostics">
-            <div class="category-header">
-              <span class="category-icon">🔬</span>
-              <h3 class="category-title">Testing & Diagnostics (SDET)</h3>
-            </div>
-            <div class="skills-tags-wrap">
-              <div class="skill-item"><span class="skill-name">Unity & Memory Profiler</span><span
-                  class="skill-exp">記憶體洩漏與瓶頸</span></div>
-              <div class="skill-item"><span class="skill-name">Snapdragon Profiler</span><span
-                  class="skill-exp">高通晶片級效能分析</span></div>
-              <div class="skill-item"><span class="skill-name">Draw Call & GC Opt</span><span class="skill-exp">渲染批次與 GC
-                  壓減</span></div>
-              <div class="skill-item"><span class="skill-name">Android Logcat / ADB</span><span
-                  class="skill-exp">底層排錯與自動化</span></div>
-              <div class="skill-item"><span class="skill-name">System Tracing</span><span class="skill-exp">Systrace /
-                  Perfetto</span></div>
-            </div>
-          </div>
-
-          <!-- Category 4: Multimedia Architecture -->
-          <div class="skill-category-card" id="skill-cat-multimedia">
-            <div class="category-header">
-              <span class="category-icon">🎬</span>
-              <h3 class="category-title">Multimedia Architecture</h3>
-            </div>
-            <div class="skills-tags-wrap">
-              <div class="skill-item"><span class="skill-name">MediaCodec</span><span class="skill-exp">硬體音視訊編解碼</span>
-              </div>
-              <div class="skill-item"><span class="skill-name">RTMP Live Streaming</span><span
-                  class="skill-exp">即時低延遲直播協定</span></div>
-              <div class="skill-item"><span class="skill-name">Miracast</span><span class="skill-exp">Wi-Fi Display
-                  無線投屏</span></div>
-              <div class="skill-item"><span class="skill-name">Surface Lifecycle</span><span
-                  class="skill-exp">雙緩衝與紋理共享</span></div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 5. Professional Experience & Academic Background Section -->
+    <!-- 2. Professional Experience & Academic Background Section -->
     <section class="section experience-section" id="experience">
       <div class="container">
 
@@ -573,7 +360,131 @@
       </div>
     </section>
 
-    <!-- 7. Featured Interactive Works Section: AI Game Development -->
+    <!-- 3. Key Engineering Projects Section -->
+    <section class="section impact-section" id="engineering-impact">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">Core Engineering Projects</div>
+          <h2 class="section-title">代表性工程實績與核心專案</h2>
+        </div>
+
+        <div class="impact-cards-stack">
+
+          <!-- Case Study 1 -->
+          <div class="impact-card" id="case-study-rtmp">
+            <div class="impact-card-header">
+              <div class="impact-index">PROJECT 01</div>
+              <h3 class="impact-headline">VR 系統級多媒體管線與 RTMP 直播系統</h3>
+              <div class="impact-metrics-pill">
+                <span class="metric-highlight">Android MediaCodec</span>
+                <span class="metric-highlight">RTMP 串流協定</span>
+                <span class="metric-highlight">Wi-Fi Display miracast</span>
+              </div>
+            </div>
+
+            <div class="pai-grid">
+              <div class="pai-block pai-problem">
+                <div class="pai-badge"><span class="badge-dot-red"></span> 專案目標</div>
+                <p>
+                  在系統層級重構並整合miracast讓玩家決定輸出為YT直播或是miracast投屏，而非傳統將畫面轉送到PC再直播的方式，並確保直播推流穩定性與降低延遲。
+                </p>
+              </div>
+
+              <div class="pai-block pai-action">
+                <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
+                <p>
+                  整合 Android <code>MediaCodec</code> 硬體編碼與 RTMP 協定；處理單眼畫面裁切與解析度;重構並整合miracast功能
+                </p>
+              </div>
+
+              <div class="pai-block pai-impact">
+                <div class="pai-badge"><span class="badge-dot-green"></span> 交付成果與價值</div>
+                <p>
+                  成功實現 VR 頭顯低延遲 YouTube 直播、原生錄影與 Miracast 無線投屏，確保前台 3D 渲染與背景多媒體管線互不干擾、長期穩定運行。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div class="impact-card" id="case-study-xr-sdk">
+            <div class="impact-card-header">
+              <div class="impact-index">PROJECT 02</div>
+              <h3 class="impact-headline">WaveXR / OpenXR 跨平台 Unity SDK 架構與硬體整合</h3>
+              <div class="impact-metrics-pill">
+                <span class="metric-highlight">商業級 XR SDK</span>
+                <span class="metric-highlight">硬體抽象轉接層</span>
+                <span class="metric-highlight">跨平台架構擴充</span>
+              </div>
+            </div>
+
+            <div class="pai-grid">
+              <div class="pai-block pai-problem">
+                <div class="pai-badge"><span class="badge-dot-red"></span> 專案挑戰與目標</div>
+                <p>
+                  面對新世代 XR 控制器按鍵配置、空間定位與周邊硬體快速迭代，既有企業客戶 SDK 存在相容性碎片化與事件分發維護成本高的瓶頸。
+                </p>
+              </div>
+
+              <div class="pai-block pai-action">
+                <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
+                <p>
+                  主導 WaveXR 與 OpenXR 雙版本 Unity SDK 介面擴充，支援外設熱插拔與即時鍵位映射。
+                </p>
+              </div>
+
+              <div class="pai-block pai-impact">
+                <div class="pai-badge"><span class="badge-dot-green"></span> 交付成果與價值</div>
+                <p>
+                  打通多家企業客戶的新硬體周邊對接，提供企業開發者高可靠度與長期向下相容的 SDK 整合體驗。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study 3 -->
+          <div class="impact-card" id="case-study-vive-sync">
+            <div class="impact-card-header">
+              <div class="impact-index">PROJECT 03</div>
+              <h3 class="impact-headline">VIVE Sync 企業級虛擬協作效能調優</h3>
+              <div class="impact-metrics-pill">
+                <span class="metric-highlight">Unity 效能調優</span>
+                <span class="metric-highlight">記憶體架構重構</span>
+                <span class="metric-highlight">遮擋剔除 (Occlusion Culling)</span>
+              </div>
+            </div>
+
+            <div class="pai-grid">
+              <div class="pai-block pai-problem">
+                <div class="pai-badge"><span class="badge-dot-red"></span> 專案挑戰與目標</div>
+                <p>
+                  在 VIVE Sync 跨國多人虛擬會議應用中，進行 memory 與 performance 的優化，確保多人場景下仍有流暢的互動體驗。
+                </p>
+              </div>
+
+              <div class="pai-block pai-action">
+                <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
+                <p>
+                  透過 Unity Profiler 與 Memory Profiler 定位 CPU-GPU 傳輸與記憶體拷貝瓶頸；導入 ASTC 紋理壓縮規範、動態降採樣機制與視野遮擋剔除。
+                </p>
+              </div>
+
+              <div class="pai-block pai-impact">
+                <div class="pai-badge"><span class="badge-dot-green"></span> 交付成果與價值</div>
+                <p>
+                  有效緩解記憶體與 CPU/GPU 壓力，避免多人場景下的卡頓與畫質下降，提升整體互動體驗。
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Featured Interactive Works Section: AI Game Development -->
     <section class="section works-section" id="featured-works">
       <div class="container">
 
@@ -673,7 +584,96 @@
       </div>
     </section>
 
-  </main>
+    <!-- 5. Core Competencies & Skills Section -->
+    <section class="section skills-section" id="core-skills">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">Core Competencies</div>
+          <h2 class="section-title">核心技術能力</h2>
+        </div>
+
+        <div class="skills-matrix-grid">
+
+          <!-- Category 1: Languages -->
+          <div class="skill-category-card" id="skill-cat-languages">
+            <div class="category-header">
+              <span class="category-icon">💻</span>
+              <h3 class="category-title">Programming Languages</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-item"><span class="skill-name">C#</span><span class="skill-exp">Unity</span></div>
+              <div class="skill-item"><span class="skill-name">Java / Kotlin</span><span class="skill-exp">Android
+                  Framework</span></div>
+              <div class="skill-item"><span class="skill-name">C / C++</span><span class="skill-exp">NDK / 底層通訊</span>
+              </div>
+              <div class="skill-item"><span class="skill-name">Python</span><span class="skill-exp">自動化腳本 / 數據</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Platforms & Frameworks -->
+          <div class="skill-category-card" id="skill-cat-platforms">
+            <div class="category-header">
+              <span class="category-icon">📱</span>
+              <h3 class="category-title">Platforms & Frameworks</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-item"><span class="skill-name">Android OS</span><span class="skill-exp">System UI / OEM
+                  Service</span></div>
+              <div class="skill-item"><span class="skill-name">Unity Engine</span><span class="skill-exp">2D/3D /
+                  Runtime</span></div>
+              <div class="skill-item"><span class="skill-name">WaveXR & OpenXR</span><span class="skill-exp">HTC VIVE
+                  SDK 整合</span></div>
+              <div class="skill-item"><span class="skill-name">VR/XR HMDs</span><span class="skill-exp">Standalone &
+                  PCVR</span></div>
+            </div>
+          </div>
+
+          <!-- Category 3: Testing & Diagnostics -->
+          <div class="skill-category-card" id="skill-cat-diagnostics">
+            <div class="category-header">
+              <span class="category-icon">🔬</span>
+              <h3 class="category-title">Testing & Diagnostics (SDET)</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-item"><span class="skill-name">Unity & Memory Profiler</span><span
+                  class="skill-exp">記憶體洩漏與瓶頸</span></div>
+              <div class="skill-item"><span class="skill-name">Snapdragon Profiler</span><span
+                  class="skill-exp">高通晶片級效能分析</span></div>
+              <div class="skill-item"><span class="skill-name">Draw Call & GC Opt</span><span class="skill-exp">渲染批次與 GC
+                  壓減</span></div>
+              <div class="skill-item"><span class="skill-name">Android Logcat / ADB</span><span
+                  class="skill-exp">底層排錯與自動化</span></div>
+              <div class="skill-item"><span class="skill-name">System Tracing</span><span class="skill-exp">Systrace /
+                  Perfetto</span></div>
+            </div>
+          </div>
+
+          <!-- Category 4: Multimedia Architecture -->
+          <div class="skill-category-card" id="skill-cat-multimedia">
+            <div class="category-header">
+              <span class="category-icon">🎬</span>
+              <h3 class="category-title">Multimedia Architecture</h3>
+            </div>
+            <div class="skills-tags-wrap">
+              <div class="skill-item"><span class="skill-name">MediaCodec</span><span class="skill-exp">硬體音視訊編解碼</span>
+              </div>
+              <div class="skill-item"><span class="skill-name">RTMP Live Streaming</span><span
+                  class="skill-exp">即時低延遲直播協定</span></div>
+              <div class="skill-item"><span class="skill-name">Miracast</span><span class="skill-exp">Wi-Fi Display
+                  無線投屏</span></div>
+              <div class="skill-item"><span class="skill-name">Surface Lifecycle</span><span
+                  class="skill-exp">雙緩衝與紋理共享</span></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    </main>
 
   <!-- Clean Footer (No Social Links) -->
   <footer class="site-footer">
