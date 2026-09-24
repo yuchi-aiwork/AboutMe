@@ -502,6 +502,132 @@ button {
   color: #f1f5f9;
 }
 
+/* Hero Story Summary Card */
+.hero-story-card {
+  margin-top: 24px;
+  background: rgba(19, 19, 26, 0.72);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-story-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-story-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-cyan);
+}
+
+.hero-story-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-story-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.story-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.dot-cyan {
+  background: var(--brand-cyan);
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+}
+
+.dot-indigo {
+  background: var(--brand-indigo);
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.6);
+}
+
+.dot-purple {
+  background: #a855f7;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
+}
+
+.story-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.story-heading {
+  font-size: 0.84rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.story-heading strong {
+  font-family: var(--font-display);
+  font-size: 0.725rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.story-heading-stage1 strong {
+  color: #38bdf8;
+  background: rgba(6, 182, 212, 0.15);
+}
+
+.story-heading-stage2 strong {
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.15);
+}
+
+.story-heading-stage3 strong {
+  color: #d8b4fe;
+  background: rgba(168, 85, 247, 0.15);
+}
+
+.story-desc {
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.story-desc strong {
+  color: #f1f5f9;
+  font-weight: 500;
+}
+
+.story-sep {
+  color: var(--text-dim);
+  margin: 0 6px;
+}
+
 .hero-cta-group {
   display: flex;
   align-items: center;

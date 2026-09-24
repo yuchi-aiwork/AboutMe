@@ -51,7 +51,6 @@
 
       <nav class="main-nav" id="main-nav" aria-label="主要導覽選單">
         <ul class="nav-links">
-          <li><a href="#about-story" class="nav-link" id="nav-link-about">故事與理念</a></li>
           <li><a href="#engineering-impact" class="nav-link" id="nav-link-impact">核心專案實績</a></li>
           <li><a href="#core-skills" class="nav-link" id="nav-link-skills">能力矩陣</a></li>
           <li><a href="#experience" class="nav-link" id="nav-link-experience">歷練與學術</a></li>
@@ -75,7 +74,6 @@
     <!-- Mobile Dropdown Menu -->
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <ul class="mobile-nav-links">
-        <li><a href="#about-story" class="mobile-nav-link">📖 故事理念與轉型</a></li>
         <li><a href="#engineering-impact" class="mobile-nav-link">⚙️ 代表性核心專案</a></li>
         <li><a href="#core-skills" class="mobile-nav-link">⚡ 核心技術矩陣</a></li>
         <li><a href="#experience" class="mobile-nav-link">💼 歷練與學術歷程</a></li>
@@ -111,6 +109,46 @@
           <p class="hero-subtext" id="hero-sub-headline">
             從底層事件排查到前端 3D 渲染，用嚴謹的工程直覺把關產品質量與技術落地。
           </p>
+
+          <!-- Concise Technical Narrative & Trajectory Card -->
+          <div class="hero-story-card" id="hero-story-summary">
+            <div class="hero-story-header">
+              <span class="hero-story-tag">技術歷程與理念・Core Trajectory</span>
+            </div>
+            <div class="hero-story-items">
+              <div class="hero-story-item">
+                <div class="story-dot dot-cyan"></div>
+                <div class="story-text">
+                  <div class="story-heading story-heading-stage1"><strong>STAGE 01</strong> 研發根基與 XR 啟航</div>
+                  <div class="story-desc">
+                    <div><strong>生醫</strong>：採集生理訊號並透過神經網路分析</div>
+                    <div><strong>Unity (開發)</strong>：虛擬教室VR、虛擬地鐵VR、ElementSurvivor</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-story-item">
+                <div class="story-dot dot-indigo"></div>
+                <div class="story-text">
+                  <div class="story-heading story-heading-stage2"><strong>STAGE 02</strong> 底層磨練與架構自覺</div>
+                  <div class="story-desc">
+                    <div><strong>Android framework</strong>：WaveXR Runtime、VRSystem Service (OEM)</div>
+                    <div><strong>Unity (維護)</strong>：ViveSync、WaveXR / OpenXR Plugin</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-story-item">
+                <div class="story-dot dot-purple"></div>
+                <div class="story-text">
+                  <div class="story-heading story-heading-stage3"><strong>STAGE 03</strong> AI遊戲實作</div>
+                  <div class="story-desc">
+                    <span>AI遊戲開發、機制設計</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Hero Visual Tech Card -->
@@ -154,82 +192,6 @@
       </div>
     </section>
 
-    <!-- 2. About Me: The Story & Vision Section -->
-    <section class="section about-section" id="about-story">
-      <div class="container">
-
-        <div class="section-header text-center">
-          <div class="section-tag">About Me: Story & Vision</div>
-          <h2 class="section-title">個人故事與技術理念</h2>
-        </div>
-
-        <div class="narrative-grid">
-
-          <!-- Narrative Step 1 -->
-          <div class="narrative-card" id="narrative-journey">
-            <div class="narrative-icon-box icon-cyan">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
-            </div>
-            <div class="narrative-step">STAGE 01</div>
-            <h3 class="narrative-title">研發根基與 XR 啟航</h3>
-            <ul class="narrative-list">
-              <li><strong>生醫</strong>：採集生理訊號並透過神經網路分析。</li>
-              <li><strong>Unity (開發為主)</strong>：虛擬教室、虛擬地鐵、ElementSurvivor (元素倖存者)。</li>
-            </ul>
-            <div class="narrative-highlight">
-              從生醫信號處理到 3D 虛擬互動，打通演算法設計與遊戲原型落地。
-            </div>
-          </div>
-
-          <!-- Narrative Step 2 -->
-          <div class="narrative-card" id="narrative-shift">
-            <div class="narrative-icon-box icon-indigo">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-              </svg>
-            </div>
-            <div class="narrative-step">STAGE 02</div>
-            <h3 class="narrative-title">底層磨練與架構自覺</h3>
-            <ul class="narrative-list">
-              <li><strong>Android framework</strong>：WaveXR Runtime、VRSystem Service (OEM)。</li>
-              <li><strong>Unity (維護為主)</strong>：ViveSync、ViveWaveXR Plugin、ViveOpenXR Plugin。</li>
-            </ul>
-            <div class="narrative-highlight">
-              掌握底層輸入事件流、硬體 HAL 對接與商業級系統服務架構維護。
-            </div>
-          </div>
-
-          <!-- Narrative Step 3: AI Innovation -->
-          <div class="narrative-card" id="narrative-ai">
-            <div class="narrative-icon-box icon-purple">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4 4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z" />
-                <path d="M16 17v1a4 4 0 0 1-8 0v-1" />
-                <path d="M12 11v6" />
-                <circle cx="5" cy="12" r="2" />
-                <circle cx="19" cy="12" r="2" />
-                <path d="M7 12h3m4 0h3" />
-              </svg>
-            </div>
-            <div class="narrative-step">STAGE 03</div>
-            <h3 class="narrative-title">AI 賦能與創新實踐</h3>
-            <ul class="narrative-list">
-              <li><strong>玩法機制原型極速驗證</strong>：借助生成式 AI 輔助核心機制設計與邏輯原型實作，大幅縮短發想到可玩版本的迭代週期。</li>
-              <li><strong>演算法調優與數值平衡</strong>：結合 AI 調校地城隨機生成、消除矩陣判斷與彈幕波次數值曲線，確保體感流暢平衡。</li>
-              <li><strong>極致人效獨立落地研發</strong>：整合 AI 代碼重構、概念視覺生成與雲端容器化部署，以極高人效獨立完成多款上線遊戲。</li>
-            </ul>
-            <div class="narrative-highlight">
-              善用 AI 工具鏈驅動高人效交付，兼備底層系統深度與極速原型落地實力。
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
     <!-- 3. Key Engineering Projects Section -->
     <section class="section impact-section" id="engineering-impact">
       <div class="container">
@@ -245,27 +207,26 @@
           <div class="impact-card" id="case-study-rtmp">
             <div class="impact-card-header">
               <div class="impact-index">PROJECT 01</div>
-              <h3 class="impact-headline">VR 系統級多媒體管線與 RTMP 直播系統 (0 到 1 自主研發)</h3>
+              <h3 class="impact-headline">VR 系統級多媒體管線與 RTMP 直播系統</h3>
               <div class="impact-metrics-pill">
                 <span class="metric-highlight">Android MediaCodec</span>
                 <span class="metric-highlight">RTMP 串流協定</span>
-                <span class="metric-highlight">Wi-Fi Display 投屏</span>
+                <span class="metric-highlight">Wi-Fi Display miracast</span>
               </div>
             </div>
 
             <div class="pai-grid">
               <div class="pai-block pai-problem">
-                <div class="pai-badge"><span class="badge-dot-red"></span> 專案挑戰與目標</div>
+                <div class="pai-badge"><span class="badge-dot-red"></span> 專案目標</div>
                 <p>
-                  VR 頭顯在運行高負載 3D 內容時，若同時執行螢幕錄製或直播推流，極易引發 CPU/GPU 資源爭搶，面臨掉幀、記憶體突波與系統過熱等多重挑戰。
+                  在系統層級重構並整合miracast讓玩家決定輸出為YT直播或是miracast投屏，而非傳統將畫面轉送到PC再直播的方式，並確保直播推流穩定性與降低延遲。
                 </p>
               </div>
 
               <div class="pai-block pai-action">
                 <div class="pai-badge"><span class="badge-dot-yellow"></span> 架構設計與實作</div>
                 <p>
-                  從 0 到 1 深度整合 Android <code>MediaCodec</code> 硬體編碼與 RTMP 協定；重構 Surface
-                  生命週期與雙緩衝管線，將繁重編碼工作卸載至專屬硬體晶片，實現非同步高效編解碼。
+                  整合 Android <code>MediaCodec</code> 硬體編碼與 RTMP 協定；處理單眼畫面裁切與解析度;重構並整合miracast功能
                 </p>
               </div>
 
@@ -655,7 +616,8 @@
           <!-- Game Project 2: Tetris Snake Racing -->
           <article class="project-card" id="project-snake-tetris">
             <div class="project-poster-wrapper">
-              <img src="./public/assets/TetrisSnakeRacing.png" alt="Tetris Snake Racing 遊戲封面展示" class="project-poster" loading="lazy" />
+              <img src="./public/assets/TetrisSnakeRacing.png" alt="Tetris Snake Racing 遊戲封面展示" class="project-poster"
+                loading="lazy" />
               <div class="poster-overlay">
                 <span class="live-badge">貪食蛇 × 俄羅斯方塊</span>
               </div>
