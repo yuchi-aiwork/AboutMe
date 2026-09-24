@@ -1,5 +1,5 @@
 /**
- * 李育齊 (Yu-Chi Li) Portfolio Website
+ * 李育齊 Portfolio Website
  * High-performance vanilla JS logic with ambient particles, smooth navigation,
  * clipboard interaction, and modal handling.
  */
