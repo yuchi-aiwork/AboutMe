@@ -1973,9 +1973,6 @@ button {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  .hero-visual {
-    order: -1;
-  }
   .narrative-grid {
     grid-template-columns: repeat(2, 1fr);
   }
